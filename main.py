@@ -23,7 +23,7 @@ city_entry.pack()
 
 tk.Button(root, text="Get Weather", command=fetch_weather).pack(pady=10)
 
-result_text = tk.Text(root, height=15, width=60)
+result_text = tk.Text(root, height=30, width=100)
 result_text.pack(pady=10)
 
 root.mainloop()

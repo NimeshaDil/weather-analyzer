@@ -1,5 +1,6 @@
 from request import get_coordinates, get_weather
 import tkinter as tk
+
 def fetch_weather():
     city_name = city_entry.get()
     lat, lon = get_coordinates(city_name)
@@ -13,6 +14,7 @@ def fetch_weather():
         result_text.delete(1.0, tk.END)
         result_text.insert(tk.END, "City not found.")
 
+# setup tkinter
 root = tk.Tk()
 root.title("Weather Analyzer")
 root.geometry("800x700")

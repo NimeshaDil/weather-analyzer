@@ -17,6 +17,8 @@ def get_weather(latitude, longitude):
     if "daily" in data:
         daily = data["daily"]
         print("\n🌤 5-Day Forecast:\n")
+        forecast = "\n🌤 5-Day Forecast:\n\n"
+
         for i in range(5):  # Only next 3 days
             # date = daily["time"][i]
             iso_date = daily["time"][i]
@@ -27,6 +29,9 @@ def get_weather(latitude, longitude):
             # Format date nicely
             day = datetime.strptime(iso_date, "%Y-%m-%d").strftime("%A, %b %d")
             print(f"{iso_date}, {day}: {min_temp}°C - {max_temp}°C | 💧 Rain: {rain} mm")
+
+            forecast += f"{iso_date}, {day}: {min_temp}°C - {max_temp}°C | 💧 Rain: {rain} mm\n"
+        return forecast
     else:
         print("❌ Forecast data not available.")
 

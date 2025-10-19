@@ -7,13 +7,15 @@ def fetch_weather():
         result = get_weather(lat, lon)
         result_text.delete(1.0, tk.END)
         result_text.insert(tk.END, str(result))
+        print(f"Latitude: {lat}, Longitude: {lon}")
+        print(f"Weather result: {result}")
     else:
         result_text.delete(1.0, tk.END)
         result_text.insert(tk.END, "City not found.")
 
 root = tk.Tk()
 root.title("Weather Analyzer")
-root.geometry("500x400")
+root.geometry("800x700")
 
 tk.Label(root, text="Enter City Name:").pack(pady=10)
 city_entry = tk.Entry(root, width=30)

@@ -21,7 +21,8 @@ tk.Label(root, text="Enter City Name:").pack(pady=10)
 city_entry = tk.Entry(root, width=30)
 city_entry.pack()
 
-tk.Button(root, text="Get Weather", command=fetch_weather).pack(pady=10)
+tk.Button(root, text="Get Weather", command=fetch_weather, bg="blue", fg="blue").pack(pady=10)
+
 
 result_text = tk.Text(root, height=30, width=100)
 result_text.pack(pady=10)
